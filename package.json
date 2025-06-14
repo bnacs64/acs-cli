@@ -1,0 +1,42 @@
+{
+  "name": "controller-configurator",
+  "version": "2.0.0",
+  "description": "Advanced access control system configuration tool with dual persistence and complete SDK implementation",
+  "main": "cli-unified.js",
+  "bin": {
+    "controller-config": "cli-unified.js"
+  },
+  "scripts": {
+    "start": "node cli-unified.js",
+    "demo": "./demo.sh",
+    "wizard": "node cli-unified.js wizard",
+    "dashboard": "node cli-unified.js dashboard",
+    "quick": "node cli-unified.js quick",
+    "doctor": "node cli-unified.js doctor",
+    "discover": "node cli-unified.js enhanced-discover",
+    "sync": "node cli-unified.js data-manager sync --both",
+    "backup": "node cli-unified.js data-manager backup",
+    "status": "node cli-unified.js data-manager status",
+    "cleanup": "node cli-unified.js data-manager cleanup",
+    "list": "node cli-unified.js list-commands",
+    "test": "jest",
+    "dev": "nodemon cli-unified.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.0.0",
+    "figlet": "^1.8.1",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0"
+  }
+}

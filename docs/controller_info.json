@@ -1,0 +1,120 @@
+{
+  "controller_discovery": {
+    "function_id": "0x94",
+    "send_packet": {
+      "type": "0x17",
+      "function_id": "0x94",
+      "device_serial_number": "0x00000000 (all low bytes)"
+    },
+    "return_packet": {
+      "type": "0x17",
+      "function_id": "0x94",
+      "device_serial_number_example": "0x0D4AB63B (Decimal 223000123)",
+      "controller_ip": "4 bytes (e.g., 192.168.168.101)",
+      "controller_mask": "4 bytes (e.g., 255.255.255.0)",
+      "controller_gateway": "4 bytes (e.g., 0.0.0.0)",
+      "mac_address": "6 bytes",
+      "driver_version": "2 bytes (BCD code, e.g., 0656)",
+      "driver_release_date": "4 bytes (BCD code, e.g., 20150429)"
+    }
+  },
+  "controller_configuration": {
+    "set_ip_address": {
+      "function_id": "0x96",
+      "send_packet": {
+        "type": "0x17",
+        "function_id": "0x96",
+        "device_serial_number_example": "0x0D4AB63B",
+        "controller_ip": "4 bytes (e.g., 192.168.168.101)",
+        "controller_mask": "4 bytes (e.g., 255.255.255.0)",
+        "controller_gateway": "4 bytes (e.g., 0.0.0.0)",
+        "identification": "0x55, 0xAA, 0xAA, 0x55 (fixed)"
+      },
+      "return_packet_note": "Non-return packet, controller restarts"
+    },
+    "time_settings": {
+      "read_date_time": {
+        "function_id": "0x32",
+        "send_packet": {
+          "type": "0x17",
+          "function_id": "0x32",
+          "device_serial_number_example": "0x0D4AB63B"
+        },
+        "return_packet": {
+          "type": "0x17",
+          "function_id": "0x32",
+          "device_serial_number_example": "0x0D4AB63B",
+          "year_high": "1 byte (BCD code, e.g., 0x20)",
+          "year_low": "1 byte (BCD code, e.g., 0x15)",
+          "month": "1 byte (BCD code, e.g., 0x04)",
+          "day": "1 byte (BCD code, e.g., 0x29)",
+          "hour": "1 byte (BCD code, e.g., 0x21)",
+          "minute": "1 byte (BCD code, e.g., 0x48)",
+          "second": "1 byte (BCD code, e.g., 0x00)"
+        }
+      },
+      "set_date_time": {
+        "function_id": "0x30",
+        "send_packet": {
+          "type": "0x17",
+          "function_id": "0x30",
+          "device_serial_number_example": "0x0D4AB63B",
+          "year_high": "1 byte (BCD code, e.g., 0x20)",
+          "year_low": "1 byte (BCD code, e.g., 0x15)",
+          "month": "1 byte (BCD code, e.g., 0x04)",
+          "day": "1 byte (BCD code, e.g., 0x29)",
+          "hour": "1 byte (BCD code, e.g., 0x21)",
+          "minute": "1 byte (BCD code, e.g., 0x48)",
+          "second": "1 byte (BCD code, e.g., 0x00)"
+        },
+        "return_packet": {
+          "type": "0x17",
+          "function_id": "0x30",
+          "device_serial_number_example": "0x0D4AB63B",
+          "year_high": "1 byte (BCD code, e.g., 0x20)",
+          "year_low": "1 byte (BCD code, e.g., 0x15)",
+          "month": "1 byte (BCD code, e.g., 0x04)",
+          "day": "1 byte (BCD code, e.g., 0x29)",
+          "hour": "1 byte (BCD code, e.g., 0x21)",
+          "minute": "1 byte (BCD code, e.g., 0x48)",
+          "second": "1 byte (BCD code, e.g., 0x00)"
+        }
+      }
+    },
+    "receiving_server_settings": {
+      "set_ip_port": {
+        "function_id": "0x90",
+        "send_packet": {
+          "type": "0x17",
+          "function_id": "0x90",
+          "device_serial_number_example": "0x0D4AB63B",
+          "receiving_server_ip": "4 bytes (e.g., 192.168.168.101, 0xC0A8A865)",
+          "communication_port": "2 bytes (e.g., 9001, 0x2329)",
+          "timed_upload_messages": "1 byte (0 or 0xff for no upload, value in seconds for timed upload)"
+        },
+        "return_packet": {
+          "type": "0x17",
+          "function_id": "0x90",
+          "device_serial_number_example": "0x0D4AB63B",
+          "information_bit": "1 (success) or 0 (failure)"
+        }
+      },
+      "read_ip_port": {
+        "function_id": "0x92",
+        "send_packet": {
+          "type": "0x17",
+          "function_id": "0x92",
+          "device_serial_number_example": "0x0D4AB63B"
+        },
+        "return_packet": {
+          "type": "0x17",
+          "function_id": "0x92",
+          "device_serial_number_example": "0x0D4AB63B",
+          "receiving_server_ip": "4 bytes (e.g., 192.168.168.101, 0xC0A8A865)",
+          "communication_port": "2 bytes (e.g., 9001, 0x2329)",
+          "timed_upload_messages": "1 byte (0 or 0xff for no upload)"
+        }
+      }
+    }
+  }
+}
